@@ -11,8 +11,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f4f4f4;
-  font-family: Arial, sans-serif;
+  background-color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -20,7 +20,7 @@ body {
   height: auto;
   min-width: 250px;
   min-height: 150px;
-  background-color: #fff;
+  background-color: wheat;
   border-radius: 3px;
   padding: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -49,7 +49,7 @@ h1 {
 
 #brand {
   font-size: 28px;
-  color: #333;
+  color: grey;
   text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
@@ -67,18 +67,19 @@ h1 {
 }
 
 #add-btn {
-  color: #fff;
-  background-color: #333;
+  color: white;
+  background-color: blue;
   border: none;
   padding: 8px 15px;
   margin: 0 5px;
   border-radius: 3px;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 60%;
 }
 
 #add-btn:hover {
-  background-color: #555;
+  background-color: grey;
 }
 
 input[type="text"] {
@@ -136,6 +137,68 @@ input[type="text"]:focus {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-.register-container{
+/* .register-container{
   width: 100%;
+} */
+
+#logBtn{
+  border: red;
+  text-decoration: none;
+  padding: 30px auto;
+  font-weight: 900;
+  margin: 20px auto;
+}
+.logInBtn{
+  text-decoration: none;
+  margin: 20px auto;
+}
+
+.firstClass{
+  margin-bottom: 20px;
+  animation: heartBeat 2s infinite;
+  color: white;
+}
+.hero p{
+  text-decoration: none;
+  font-weight: 800;
+}
+.hero p {
+  color: white;
+  text-decoration: wavy;
+}
+.entrance{
+  margin: 30px auto;
+  color: whitesmoke;
+}
+
+.regBtn{
+  padding: 10px;
+}
+
+.btns{
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 20px auto;
+}
+.input-box{
+  background-color: rgba(0, 0, 0, 0.575);
+  width: 400px;
+  padding: 20px;
+  color: white;
+}
+
+.log-container{
+  background-image: url('https://i.pinimg.com/236x/dd/9e/6b/dd9e6b3417414eff234c837202bc02ca.jpg');
+}
+.cont{
+  background-image: url('https://i.pinimg.com/236x/7d/94/10/7d9410111fd4223ad457990c4c0553c2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image{
+  background-image: url('https://i.pinimg.com/236x/b6/5e/6e/b65e6ea865f6867cd51cd3acc983339e.jpg');
+  background-repeat: repeat-y;
+  background-color: burlywood;
 }
