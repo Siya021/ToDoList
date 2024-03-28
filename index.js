@@ -98,12 +98,59 @@ function renderList(){
     checkBoxes();
     editItem();
 }
+
 function saveProfile(){
     let name, email, password;
 
     name = document.getElementById("name").value;
+    email = document.getElementById("email").value;
+    password = document.getElementById("passwd").value
+
+    let user_rec = new Array();
+    user_rec = JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+    if(user_rec.some((v)=>{
+        return v.email == email
+    })){
+        alert("Hayibo !! Dluplicate")
+    }else{
+        user_rec.push({
+            "name" : name,
+            "email": email,
+            "passwd": password
+        })
+        localStorage.setItem("users",JSON.stringify(user_rec))
+    }
+}
+
+function logIn(){
+    let email,password;
+
+    email = document.getElementById("email").value;
+    password = document.getElementById("passwd").value;
+
+    let user_rec = new Array();
+    user_rec = JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+    if( user_rec.some((v)=>{
+            return v.email == email && v.password == password
+        })){
+            alert("Awe Login Successful");
+            let currentUser = user_rec.filter((v)=>{
+                return v.email == email && v.password == password
+            })[0]
+
+            localStorage.setItem("name", currentUser.name);
+            localStorage.setItem("email",currentUser.email);
+            window.location.href = "index.html";
+        }else{
+            alert("Login Failed")
+        }
     
 }
 
+function logOut(){
+    localStorage.removeItem("name")
+    localStorage.removeItem("email")
+    window.location.href = "login.html"
+}
 
 renderList();
