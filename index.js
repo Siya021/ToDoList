@@ -8,7 +8,6 @@ let todoDeleteButtons;
 let todoCheckBoxes;
 let editButtons;
 let time = document.getElementById("real-time");
-// let  = document.getElementById("real-date");
 addBtn.addEventListener('click', addItem);
 const currentDateTimeSA = new Date(new Date().toLocaleString("en-US", {timeZone: "Africa/Johannesburg"}))
 
@@ -36,20 +35,7 @@ function addItem(){
         renderList();
     }
 }
-// setInterval(()=>{
-//     let d = new Date();
-//     time.innerHTML = d.toLocaleTimeString()
-// },1000);
-
-// let today = new Date();
-// let dd = String(today.getDate()).padStart(2, "0");
-// let mm = String(today.getMonth() + 1).padStart(2, "0"); 
-// let yyyy = today.getFullYear();
-
-// today = mm + "/" + dd + "/" + yyyy;
-// document.write(today);
-
-
+//  Delete Buttons
 function deleteButtons(){
     todoDeleteButtons = [...document.querySelectorAll('.close-btn')];
     todoDeleteButtons.forEach((item)=>{
@@ -78,6 +64,7 @@ function checkBox(){
     renderList();
 }
 
+// Edit Button 
 function editItem(){
 editButtons = [...document.querySelectorAll('.edit-btn')];
 editButtons.forEach((item)=>{
